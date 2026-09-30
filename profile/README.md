@@ -26,6 +26,19 @@ that surprise back into a gated, human-approved catalog change.
 | [**metis-catalog**](https://github.com/metis-lang-dev/metis-catalog) | Behavior catalogs with certified artifacts: road world models plus a playground of logical domains — the Ceptre love triangle, Game of Life (IPPC), the Overcooked kitchen — each a full LLP world model gated on metisc goldens. |
 | [**metis-loop**](https://github.com/metis-lang-dev/metis-loop) | The explanation / formalization loop: surprise records → mined text → LLM-drafted candidate pack → gate cascade → repair → human-approved catalog change. The REPL is the loop; the CLI and web console are wrappers. |
 
+## The paper
+
+**[Behavior Programs as Measures over Proofs](https://github.com/metis-lang-dev/metis-lang/blob/master/paper/metis.pdf)**
+(draft 0.3, 2026-09-30 — [PDF](https://raw.githubusercontent.com/metis-lang-dev/metis-lang/master/paper/metis.pdf) ·
+[LaTeX source](https://github.com/metis-lang-dev/metis-lang/blob/master/paper/metis.tex)) —
+staged stochastic multiset rewriting with a linear-logic front end, an
+MLL^B proof-net IR, and an executable, certified, machine-checked
+compilation pipeline. Its central metatheory is machine-checked in
+Lean 4: Theorem 3 (equivalence onto the image) in full, and the cores
+of Theorems 1, 2 and 4 — see
+[`metis-lang/formal/`](https://github.com/metis-lang-dev/metis-lang/tree/master/formal),
+sorry-free on Lean's three standard axioms.
+
 ## Where to start
 
 Clone [metis-lang](https://github.com/metis-lang-dev/metis-lang) and run
