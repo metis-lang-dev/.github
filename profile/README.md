@@ -42,6 +42,7 @@ that surprise back into a gated, human-approved catalog change.
 | [**metispy**](https://github.com/metis-lang-dev/metispy) | The python referee + research kit: exact inference, learning (Dirichlet notching, MAP-EM), decision, surprise records + `recover()` replay, and the formalization gate cascade. It referees the shipping toolchain rather than being it. |
 | [**metis-catalog**](https://github.com/metis-lang-dev/metis-catalog) | Behavior catalogs with certified artifacts: road world models plus a playground of logical domains — the Ceptre love triangle, Game of Life (IPPC), the Overcooked kitchen — each a full LLP world model gated on metisc goldens. |
 | [**metis-loop**](https://github.com/metis-lang-dev/metis-loop) | The explanation / formalization loop: surprise records → mined text → LLM-drafted candidate pack → gate cascade → repair → human-approved catalog change. The REPL is the loop; the CLI and web console are wrappers. |
+| [**metis-agent**](https://github.com/metis-lang-dev/metis-agent) | A small local LLM as the narrator and supervisor of a metis runtime: the runtime owns state, procedure and safety (certified side); the model only narrates events, maps a request to one grammar-constrained intent, and triages surprises the runtime then tests. A Go harness (FSTTM floor management, llama.cpp in-process, voice and chat over websockets) talks to the kernel through ports; design docs first, code landing. |
 
 ## The paper
 
