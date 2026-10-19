@@ -40,11 +40,17 @@ that surprise back into a gated, human-approved catalog change.
 | --- | --- |
 | [**metis-lang**](https://github.com/metis-lang-dev/metis-lang) | The language product, self-contained: the OCaml **metisc** compiler (stdlib only, one static binary), the header-only C++17 runtime, the language / IR / canonical-key specs, the parity corpus with committed goldens, and editor tooling (VS Code, Emacs). |
 | [**metispy**](https://github.com/metis-lang-dev/metispy) | The python referee + research kit: exact inference, learning (Dirichlet notching, MAP-EM), decision, surprise records + `recover()` replay, and the formalization gate cascade. It referees the shipping toolchain rather than being it. |
-| [**metis-catalog**](https://github.com/metis-lang-dev/metis-catalog) | Behavior catalogs with certified artifacts: road world models plus a playground of logical domains — the Ceptre love triangle, Game of Life (IPPC), the Overcooked kitchen — each a full LLP world model gated on metisc goldens. |
-| [**metis-loop**](https://github.com/metis-lang-dev/metis-loop) | The explanation / formalization loop: surprise records → mined text → LLM-drafted candidate pack → gate cascade → repair → human-approved catalog change. The REPL is the loop; the CLI and web console are wrappers. |
-| [**metis-agent**](https://github.com/metis-lang-dev/metis-agent) | A small local LLM as the narrator and supervisor of a metis runtime: the runtime owns state, procedure and safety (certified side); the model only narrates events, maps a request to one grammar-constrained intent, and triages surprises the runtime then tests. A Go harness (FSTTM floor management, llama.cpp in-process, voice and chat over websockets) talks to the kernel through ports; design docs first, code landing. |
+| [**metis-catalog**](https://github.com/metis-lang-dev/metis-catalog) | The catalog: every domain a package (one directory, one manifest, one loader) — story worlds from Ceptre, puzzles and planning, small formal worlds, device domains with hosts and intents (the dog, the plant, the kitchen), eight IPPC/RDDL worlds against pyRDDLGym, and the parked road domain. CI runs and builds every package in both toolchains. |
+| [**metis-loop**](https://github.com/metis-lang-dev/metis-loop) | The explanation / formalization loop: surprise records → mined text → LLM-drafted candidate pack → gate cascade → repair → human-approved catalog change. The REPL is the loop; the CLI and web console are wrappers. Its SDK (`sdk/`) is the one validated catalog write every consumer shares. |
+| [**metis-agent**](https://github.com/metis-lang-dev/metis-agent) | A small local LLM as the narrator and supervisor of a metis runtime: the runtime owns state, procedure and safety (certified side); the model only narrates events, maps a request to one grammar-constrained intent, and triages surprises the runtime then tests. A Go harness (FSTTM floor management, llama.cpp in-process, voice and chat over websockets) talks to the kernel through ports; a Python development stack and a Go embedded runtime, at parity on recorded days. |
+| [**metis-agentic-loop**](https://github.com/metis-lang-dev/metis-agentic-loop) | The agentic loop: a model, hosted in pi, works the kernel's REPL and the domain agent through generated tools — it turns a program into a package, exercises it against its world, proposes extensions — and every write into the catalog is a diff a person approves. |
+| [**fsttm-web**](https://github.com/metis-lang-dev/fsttm-web) | The finite-state turn-taking floor machine in the browser: floor, attention, barge-in, speech — the console page both agent backends serve. |
+| [**metis-lang-dev.github.io**](https://metis-lang-dev.github.io) | The project's page: the three layers, a surprise closing the loop, the papers. |
 
-## The paper
+## The papers
+
+The stack's three layers have one paper each; the overview is the [project page](https://metis-lang-dev.github.io).
+
 
 **[Behavior Programs as Measures over Proofs](https://github.com/metis-lang-dev/metis-lang/blob/master/paper/metis.pdf)**
 (draft 0.3, 2026-09-30 — [PDF](https://raw.githubusercontent.com/metis-lang-dev/metis-lang/master/paper/metis.pdf) ·
@@ -59,6 +65,14 @@ Lean 4: Theorem 3 (equivalence onto the image) in full — closing open
 problem 1 of draft 0.2 — plus the cores of Theorems 1, 2 and 4; see
 [`metis-lang/formal/`](https://github.com/metis-lang-dev/metis-lang/tree/master/formal),
 sorry-free on Lean's three standard axioms.
+
+**[Behavior Catalogs in Practice](https://github.com/metis-lang-dev/metis-catalog/blob/master/paper/catalog.pdf)**
+(draft 0.1, 2026-10-19 — [LaTeX source](https://github.com/metis-lang-dev/metis-catalog/blob/master/paper/catalog.tex)) —
+domains as packages, and an agentic loop that formalizes and extends them under a human gate.
+
+**[Small Models, Certified Behavior](https://github.com/metis-lang-dev/metis-agent/blob/main/paper/agent.pdf)**
+(draft 0.1, 2026-10-19 — [LaTeX source](https://github.com/metis-lang-dev/metis-agent/blob/main/paper/agent.tex)) —
+a runtime that lends domain knowledge to local LLMs on robots and appliances.
 
 ## Where to start
 
